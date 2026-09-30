@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f49d25",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221a10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Profile - Sunrise Spoon</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-4 bg-white dark:bg-slate-900/50 sticky top-0 z-10 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">light_mode</span>
+</div>
+<h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Sunrise Spoon</h1>
+</div>
+<a class="flex items-center gap-2 p-2 rounded-full hover:bg-primary/10 transition-colors" href="#">
+<span class="text-sm font-semibold hidden sm:block text-slate-900 dark:text-white">My Account</span>
+<span class="material-symbols-outlined text-primary scale-110">settings</span>
+</a>
+</header>
+<!-- Main Content -->
+<main class="flex-1 max-w-2xl mx-auto w-full pb-24">
+<!-- User Profile Section -->
+<section class="p-6 flex flex-col items-center gap-4">
+<div class="relative">
+<div class="w-32 h-32 rounded-full border-4 border-primary/20 p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Professional headshot of a smiling man with short hair" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcMuQ1im_yW-bMiF0OgyaN1QIbJtE7r48UcPhVGOPsyNcoo9bwKdrGN5mLaUnuOCItThGBy2bQzNfMjY4ead-3tZoGfnX-XKlMXHNC54iIcs6jCPoC7SGHXDCoPq55IDIlkHlGTVQ8nSKMYZqqibshxCdV4j371qY7KEG8oMW1w9aDBq24-Xghj06GGA5B9BOcRDw3M8BvnzEFe6NfFJB9lNp9NXAe4B8tSTKIvYzVUe9nvd0LnaousmVVckAItTczNaT59o7AP4Kb')">
+</div>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-1.5 rounded-full shadow-lg border-2 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-sm block">edit</span>
+</div>
+</div>
+<div class="text-center">
+<h2 class="text-2xl font-bold">Alex Johnson</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">alex.johnson@email.com</p>
+</div>
+<button class="bg-primary/10 hover:bg-primary/20 text-primary font-bold px-8 py-2.5 rounded-full transition-all text-sm">
+                Edit Profile
+            </button>
+</section>
+<!-- My Goals Section -->
+<section class="px-4 mb-8">
+<h3 class="text-lg font-bold mb-4 px-2">My Goals</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-3">
+<div class="bg-orange-100 dark:bg-orange-900/30 p-2 rounded-lg text-orange-600">
+<span class="material-symbols-outlined">local_fire_department</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Daily Calories</p>
+<p class="font-bold text-slate-800 dark:text-slate-200">2,000 kcal</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-3">
+<div class="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg text-blue-600">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Water Intake</p>
+<p class="font-bold text-slate-800 dark:text-slate-200">2.5L</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dietary Preferences -->
+<section class="px-4 mb-8">
+<h3 class="text-lg font-bold mb-4 px-2">Dietary Preferences</h3>
+<div class="flex flex-wrap gap-2 px-2">
+<span class="bg-primary text-white px-4 py-1.5 rounded-full text-xs font-semibold">Vegetarian</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-full text-xs font-semibold">High Protein</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-full text-xs font-semibold">Gluten Free</span>
+<span class="bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-full text-xs font-semibold">Low Carb</span>
+<button class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 p-1.5 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</section>
+<!-- Account Options -->
+<section class="px-4 mb-8">
+<div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-700 overflow-hidden">
+<a class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-800 border-b border-slate-50 dark:border-slate-700" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">menu_book</span>
+<span class="font-medium">My Recipes</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-800 border-b border-slate-50 dark:border-slate-700" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">card_membership</span>
+<div class="flex flex-col">
+<span class="font-medium">Subscription Plan</span>
+<span class="text-[10px] text-primary font-bold uppercase">Premium Member</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-800 border-b border-slate-50 dark:border-slate-700" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">notifications</span>
+<span class="font-medium">Notifications</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-800" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">help_center</span>
+<span class="font-medium">Help &amp; Support</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</a>
+</div>
+</section>
+<section class="px-4">
+<button class="w-full py-4 text-red-500 font-bold text-sm bg-red-50 dark:bg-red-900/10 rounded-2xl">
+                Log Out
+            </button>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="mt-auto border-t border-primary/10 bg-white dark:bg-slate-900 px-4 py-2 flex items-center justify-around sticky bottom-0 z-20">
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">wb_sunny</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Today</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Recipes</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</a>
+</footer>
+</body></html>

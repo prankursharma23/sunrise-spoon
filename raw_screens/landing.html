@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f49d25",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221a10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .checkbox-custom:checked {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="flex items-center justify-between px-6 py-4 bg-white dark:bg-slate-900/50 sticky top-0 z-10 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">light_mode</span>
+</div>
+<h1 class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Sunrise Spoon</h1>
+</div>
+<a class="flex items-center gap-2 p-2 rounded-full hover:bg-primary/10 transition-colors" href="#">
+<span class="text-sm font-semibold hidden sm:block">My Account</span>
+<span class="material-symbols-outlined text-primary scale-110">settings</span>
+</a>
+</header>
+<main class="flex-1 max-w-2xl mx-auto w-full px-6 py-8">
+<section class="mb-10 text-center sm:text-left">
+<h2 class="text-3xl font-extrabold mb-2 text-slate-900 dark:text-white">Good Morning! ☀️</h2>
+<p class="text-slate-500 dark:text-slate-400">Time to fuel your body. Here is your meal plan for today.</p>
+</section>
+<div class="relative w-full aspect-[21/9] rounded-xl overflow-hidden mb-8 shadow-lg">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/40 to-transparent z-10"></div>
+<img alt="Healthy morning breakfast bowl with fruits" class="w-full h-full object-cover" data-alt="Vibrant healthy breakfast bowl with fresh fruits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWK32aoxNx8WF3PiUA_iMpJTDXL_HmgOpEq1lOlH-eIzlcFoaki_621gQ8hGC5wPf1KQymSJGHiXJ4o9Z3wmdP56RYxlzwUuRWdxqQKxRF2GO7tUP69ufUBa5EiI49Uq29RfhYjxwbk-RlHuMmPic31j85zMyVAyT8Ko179wnkF2BhdtP42z8yyTivXAx5_3UxZGxwMqE8Aicf0Hb1b2n2L7FG5huvj63sFl19ahdrQ0hTYmmaBHlngkNUyLOEL9DgKJYHtOjY1YFP"/>
+<div class="absolute bottom-4 left-4 z-20">
+<span class="bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary uppercase tracking-wider">Today's Motivation</span>
+<p class="text-white font-bold mt-1 drop-shadow-md">Eat well, feel great.</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-primary/10 overflow-hidden">
+<div class="p-6 border-b border-primary/5">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">task_alt</span>
+                    Daily Meal Checklist
+                </h3>
+</div>
+<div class="divide-y divide-primary/5">
+<label class="flex items-center justify-between p-6 hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">coffee</span>
+</div>
+<div>
+<p class="font-bold text-slate-800 dark:text-slate-200">Meal 1 (Breakfast)</p>
+<p class="text-xs text-slate-500">Recommended: 07:00 AM - 09:00 AM</p>
+</div>
+</div>
+<input class="checkbox-custom h-7 w-7 rounded-full border-2 border-primary/30 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-6 hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div>
+<p class="font-bold text-slate-800 dark:text-slate-200">Meal 2 (Lunch)</p>
+<p class="text-xs text-slate-500">Recommended: 12:00 PM - 02:00 PM</p>
+</div>
+</div>
+<input class="checkbox-custom h-7 w-7 rounded-full border-2 border-primary/30 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-6 hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">cookie</span>
+</div>
+<div>
+<p class="font-bold text-slate-800 dark:text-slate-200">Meal 3 (Snacks)</p>
+<p class="text-xs text-slate-500">Recommended: 04:00 PM - 05:00 PM</p>
+</div>
+</div>
+<input class="checkbox-custom h-7 w-7 rounded-full border-2 border-primary/30 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-6 hover:bg-primary/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">dinner_dining</span>
+</div>
+<div>
+<p class="font-bold text-slate-800 dark:text-slate-200">Meal 4 (Dinner)</p>
+<p class="text-xs text-slate-500">Recommended: 07:00 PM - 08:30 PM</p>
+</div>
+</div>
+<input class="checkbox-custom h-7 w-7 rounded-full border-2 border-primary/30 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 transition-all cursor-pointer" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="mt-8 bg-primary/10 rounded-xl p-6 border border-primary/20 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">local_fire_department</span>
+</div>
+<div>
+<p class="text-sm font-medium text-primary uppercase tracking-widest">Daily Goal</p>
+<p class="text-xl font-extrabold">1,850 kcal remaining</p>
+</div>
+</div>
+<div class="h-12 w-12 rounded-full border-4 border-primary border-t-transparent flex items-center justify-center">
+<span class="text-[10px] font-bold">25%</span>
+</div>
+</div>
+</main>
+<footer class="mt-auto border-t border-primary/10 bg-white dark:bg-slate-900 px-4 py-2 flex items-center justify-around sticky bottom-0 z-20">
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-symbols-outlined">wb_sunny</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Today</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Recipes</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</a>
+</footer>
+</body></html>
